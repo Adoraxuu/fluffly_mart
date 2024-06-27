@@ -35,6 +35,38 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-browser-reload"
+version = "1.13.0"
+description = "Automatically reload your browser in development."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "django_browser_reload-1.13.0-py3-none-any.whl", hash = "sha256:5c1705eb29f0b72808b702484f10a8d5da9cd9243e55ab81446cb697e96b3e8c"},
+    {file = "django_browser_reload-1.13.0.tar.gz", hash = "sha256:4e3507c10518f4c7439588aaed2f0c21b503878ecea7b18893f1e635e0cbe3ab"},
+]
+
+[package.dependencies]
+asgiref = ">=3.6"
+django = ">=3.2"
+
+[[package]]
+name = "django-tailwind"
+version = "3.8.0"
+description = "Tailwind CSS Framework for Django projects"
+optional = false
+python-versions = ">=3.10.0,<4.0.0"
+files = [
+    {file = "django_tailwind-3.8.0-py3-none-any.whl", hash = "sha256:fa969c5b95d314b173fe2b2ed2cb2c03f2e2c94fdc2c01ff73a993fa159085da"},
+    {file = "django_tailwind-3.8.0.tar.gz", hash = "sha256:31c2f4a7879d685c2de0feaf0b63f246200b37337bea4d7dbafb59bc3f10c008"},
+]
+
+[package.dependencies]
+django = ">=3.2.14"
+
+[package.extras]
+reload = ["django-browser-reload (>=1.12.1,<2.0.0)"]
+
+[[package]]
 name = "mysqlclient"
 version = "2.2.4"
 description = "Python interface to MySQL"
@@ -92,4 +124,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "d1b022215347c5aa37c74acaeb58b53071c0a2066c9c2b5562391d5ed4acd544"
+content-hash = "9b7caf5f462c09fa77970ac15f420482b934fcf7b0b5ff864bf7c99672beefff"
