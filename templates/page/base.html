@@ -1,8 +1,8 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
-    <title>Django Tailwind</title>
+    <title>HOME PAGE</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -10,10 +10,63 @@
   </head>
 
   <body class="bg-gray-50 font-serif leading-normal tracking-normal">
-    <div class="container mx-auto">
-      <section class="flex items-center justify-center h-screen">
-        <h1 class="text-3xl">Django + Tailwind = ❤️</h1>
-      </section>
+    <!-- Top Navigation Bar -->
+    <nav class="w-full h-[57px] bg-[#ff3D00] flex justify-between items-center pl-[30px] pr-[72px] fixed top-0 z-10">
+      <div class="flex h-[38px] items-center border border-white my-[10px]">
+        <div class="flex items-center mx-[27px] space-x-[4.5px]">
+          <img src="{% static 'img/nav/logo.png' %}" alt="logo" class="w-[31px] h-[29px]" />
+          <h1 class="text-white text-[16px]">CWOWS 全球貨池平台</h1>
+        </div>
+      </div>
+      <div class="flex items-center text-white">
+        <span class="border border-white rounded w-[105px] h-[33px] flex justify-center items-center">幫助中心</span>
+        <span class="border-r border-white p-2 h-[32px]"></span>
+        <span class="mx-[27px]">中文</span>
+        <img src="{% static 'img/nav/notification.svg' %}" alt="logo" class="w-[23px] h-[21px] mx-[27px]" />
+        <div class="flex items-center space-x-2">
+          <div class="rounded-full bg-white w-[36px] h-[36px] flex justify-center items-center">
+            <img src="{% static 'img/nav/account.svg' %}" alt="logo" class="w-[23px] h-[21px]" />
+          </div>
+          <span class="text-[14px]">奶油採購帳號</span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="flex pt-[57px]">
+      <!-- Left Sidebar -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <ul class="sidebar-group">
+            <li class="sidebar-title">
+              <img src="{% static 'img/nav/shopping.svg' %}" alt="shopping" class="inline-block w-6 h-6 mr-2"> 
+              訂單
+            </li>
+            <li><a href="#" class="sidebar-link">訂單管理</a></li>
+            <li><a href="#" class="sidebar-link">退貨退款</a></li>
+            <li><a href="#" class="sidebar-link">物流管理</a></li>
+          </ul>
+          <div class="sidebar-divider"></div>
+          <ul class="sidebar-group">
+            <li class="sidebar-title">商品</li>
+            <li><a href="#" class="sidebar-link">批量選品</a></li>
+            <li><a href="#" class="sidebar-link">搜索選品</a></li>
+            <li><a href="#" class="sidebar-link">鋪貨任務管理</a></li>
+          </ul>
+          <div class="sidebar-divider"></div>
+          <ul class="sidebar-group">
+            <li class="sidebar-title">財務</li>
+            <li><a href="#" class="sidebar-link">支付帳單</a></li>
+            <li><a href="#" class="sidebar-link">退款帳單</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content Area -->
+      <div class="ml-[200px] w-full pt-[20px] p-4">
+        <main class="bg-gray-100 p-4 rounded-lg">
+          {% block content %}{% endblock %}
+        </main>
+      </div>
     </div>
   </body>
 </html>

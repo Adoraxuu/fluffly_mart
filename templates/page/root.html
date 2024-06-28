@@ -1,3 +1,31 @@
 {% extends "page/base.html" %} {% block content %}
-<h1>關於我們</h1>
+<div class="bg-blue-300 h-[200px] mb-4">廣告用Banner</div>
+<div class="grid grid-cols-2 gap-4">
+  <div class="bg-white p-4 rounded-lg shadow-md">
+    <h2 class="text-lg font-bold mb-2">代辦事項</h2>
+    <p>待採購訂單: 0</p>
+    <p>待付款訂單: 0</p>
+    <p>待發貨訂單: 0</p>
+    <p>退貨退款訂單: 0</p>
+  </div>
+  <div class="bg-white p-4 rounded-lg shadow-md">
+    <h2 class="text-lg font-bold mb-2">公告</h2>
+    <ul>
+      <li>公告1</li>
+      <li>公告2</li>
+      <li>公告3</li>
+    </ul>
+  </div>
+</div>
+<div class="mt-4">
+  <h2 class="text-lg font-bold mb-2">常用功能</h2>
+  <div class="flex space-x-4">
+    <div class="bg-white p-4 rounded-lg shadow-md w-24 h-24"></div>
+    <div class="bg-white p-4 rounded-lg shadow-md w-24 h-24"></div>
+    <div class="bg-white p-4 rounded-lg shadow-md w-24 h-24"></div>
+    <div class="bg-white p-4 rounded-lg shadow-md w-24 h-24"></div>
+    <div class="bg-white p-4 rounded-lg shadow-md w-24 h-24"></div>
+  </div>
+</div>
+
 {% endblock %}

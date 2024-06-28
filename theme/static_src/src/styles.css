@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sidebar {
+    @apply fixed top-[57px] left-0 h-full w-[200px] bg-white text-gray-800 flex flex-col p-4;
+  }
+  
+  .sidebar-nav {
+    @apply flex flex-col space-y-4;
+  }
+  
+  .sidebar-group {
+    @apply space-y-2;
+  }
+  
+  .sidebar-title {
+    @apply font-semibold text-lg mb-2;
+  }
+  
+  .sidebar-link {
+    @apply p-2 rounded block hover:text-white hover:bg-[#ff3D00];
+  }
+
+  .sidebar-divider {
+    @apply border-t border-gray-600 my-2;
+  }
