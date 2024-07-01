@@ -1,0 +1,88 @@
+{% load static %}
+<aside class="sidebar">
+  <nav class="sidebar-nav">
+    <section class="sidebar-group" x-data="{ open: false }">
+      <div class="sidebar-title">
+        <button
+          class="flex items-center justify-between w-full"
+          @click="open = ! open"
+        >
+          <div>
+            <img
+              src="{% static 'img/nav/shopping.svg' %}"
+              alt="shopping"
+              class="inline-block w-6 h-6 mr-2"
+            />
+            <span>訂單</span>
+          </div>
+          <img
+            src="{% static 'img/nav/sidebar_btn.svg' %}"
+            alt="shopping"
+            class="inline-block w-[9px] h-[5px] mr-2"
+          />
+        </button>
+      </div>
+      <ul x-show="open" class="transition-all duration-300">
+        <li><a href="{% url 'order:index' %}" class="sidebar-link">訂單管理</a></li>
+        <li><a href="{% url 'order:refund' %}" class="sidebar-link">退貨退款</a></li>
+        <li><a href="#" class="sidebar-link">物流管理</a></li>
+      </ul>
+    </section>
+    <div class="sidebar-divider"></div>
+    <section class="sidebar-group" x-data="{ open: false }">
+      <div class="sidebar-title">
+        <button
+          class="flex items-center justify-between w-full"
+          @click="open = ! open"
+        >
+          <div>
+            <img
+              src="{% static 'img/nav/shopping.svg' %}"
+              alt="shopping"
+              class="inline-block w-6 h-6 mr-2"
+            />
+            <span>商品</span>
+          </div>
+          <img
+            src="{% static 'img/nav/sidebar_btn.svg' %}"
+            alt="shopping"
+            class="inline-block w-[9px] h-[5px] mr-2"
+          />
+        </button>
+      </div>
+      <ul x-show="open" class="transition-all duration-300">
+        <li><a href="#" class="sidebar-link">批量選品</a></li>
+        <li><a href="#" class="sidebar-link">搜索選品</a></li>
+        <li><a href="#" class="sidebar-link">鋪貨任務管理</a></li>
+      </ul>
+    </section>
+    <div class="sidebar-divider"></div>
+    <section class="sidebar-group" x-data="{ open: false }">
+      <div class="sidebar-title">
+        <button
+          class="flex items-center justify-between w-full"
+          @click="open = ! open"
+        >
+          <div>
+            <img
+              src="{% static 'img/nav/shopping.svg' %}"
+              alt="shopping"
+              class="inline-block w-6 h-6 mr-2"
+            />
+            <span>財務</span>
+          </div>
+          <img
+            src="{% static 'img/nav/sidebar_btn.svg' %}"
+            alt="shopping"
+            class="inline-block w-[9px] h-[5px] mr-2"
+          />
+        </button>
+      </div>
+      <ul x-show="open" class="transition-all duration-300">
+        <li><a href="#" class="sidebar-link">支付帳單</a></li>
+        <li><a href="#" class="sidebar-link">退款帳單</a></li>
+      </ul>
+    </section>
+    </ul>
+  </nav>
+</aside>
