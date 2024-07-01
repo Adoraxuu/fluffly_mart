@@ -787,12 +787,12 @@ select {
   margin-left: 200px;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .block {
@@ -813,6 +813,10 @@ select {
 
 .h-24 {
   height: 6rem;
+}
+
+.h-6 {
+  height: 1.5rem;
 }
 
 .h-\[200px\] {
@@ -847,12 +851,12 @@ select {
   height: 57px;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
 .w-24 {
   width: 6rem;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .w-\[105px\] {
@@ -873,10 +877,6 @@ select {
 
 .w-full {
   width: 100%;
-}
-
-.w-6 {
-  width: 1.5rem;
 }
 
 .grid-cols-2 {
