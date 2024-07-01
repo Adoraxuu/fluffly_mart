@@ -25,3 +25,11 @@
   .sidebar-divider {
     @apply border-t border-gray-600 my-2;
   }
+
+  .btn-primary{
+    @apply bg-[#ff3D00] text-white px-9 py-2 shadow-md rounded-3xl;
+  }
+
+  .btn-gray{
+    @apply bg-white text-gray-600 px-9 py-2 shadow-md rounded-3xl	;
+  }
