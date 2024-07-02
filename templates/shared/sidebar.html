@@ -37,7 +37,7 @@
         >
           <div>
             <img
-              src="{% static 'img/nav/shopping.svg' %}"
+              src="{% static 'img/nav/product.svg' %}"
               alt="shopping"
               class="inline-block w-6 h-6 mr-2"
             />
@@ -51,9 +51,10 @@
         </button>
       </div>
       <ul x-show="open" class="transition-all duration-300">
-        <li><a href="#" class="sidebar-link">批量選品</a></li>
-        <li><a href="#" class="sidebar-link">搜索選品</a></li>
-        <li><a href="#" class="sidebar-link">鋪貨任務管理</a></li>
+        <li><a href="{% url 'product:index' %}" class="sidebar-link">批量選品</a></li>
+        <li><a href="{% url 'product:search' %}" class="sidebar-link">搜索選品</a></li>
+        <li><a href="{% url 'product:inventory' %}" class="sidebar-link">鋪貨任務管理</a></li>
+        <li><a href="{% url 'product:selected' %}" class="sidebar-link">已選商品管理</a></li>
       </ul>
     </section>
     <div class="sidebar-divider"></div>
@@ -65,7 +66,7 @@
         >
           <div>
             <img
-              src="{% static 'img/nav/shopping.svg' %}"
+              src="{% static 'img/nav/finance.svg' %}"
               alt="shopping"
               class="inline-block w-6 h-6 mr-2"
             />

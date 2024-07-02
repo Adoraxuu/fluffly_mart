@@ -1,0 +1,74 @@
+{% extends "page/base.html" %} {% block content %}{% load static %}
+<div class="border-b border-gray-200 pb-4 mb-4">
+  <nav class="flex space-x-4">
+    <a href="#" class="tab-link">正常</a>
+    <a href="#" class="tab-link">已失效</a>
+    <a href="#" class="tab-link">已取消</a>
+  </nav>
+</div>
+<div class="flex justify-between items-center mb-4">
+  <div class="flex items-center space-x-2">
+    <span>0 已選擇</span>
+    <button class="btn-gray">取消鋪貨</button>
+  </div>
+  <div class="flex items-center space-x-4">
+    <div class="flex items-center space-x-2">
+      <label class="text-sm">已選商品/篩選</label>
+      <select id="category" class="border-gray-300 rounded-md">
+        <option value="">選擇類別</option>
+      </select>
+    </div>
+    <div class="flex items-center space-x-2">
+      <input type="date" id="start-date" class="border-gray-300 rounded-md" />
+    </div>
+    <div class="flex items-center border border-gray-300 rounded-md">
+      <input
+        placeholder="搜索商品"
+        class="h-[35px] pl-2 border-none outline-none rounded-l-md"
+      />
+      <label
+        class="h-[35px] bg-[#ff3D00] rounded-r-md flex items-center justify-center"
+      >
+        <img
+          src="{% static 'img/table/search.svg' %}"
+          alt="logo"
+          class="w-[28px] h-[28px]"
+        />
+      </label>
+    </div>
+    <button class="btn-gray">重置</button>
+  </div>
+</div>
+
+<div class="pt-5">
+  <table class="min-w-full bg-white">
+    <thead class="bg-gray-200">
+      <tr>
+        <th class="table-header">#</th>
+        <th class="table-header">商品</th>
+        <th class="table-header">訂購價</th>
+        <th class="table-header">庫存</th>
+        <th class="table-header">訂單-過去三個月</th>
+        <th class="table-header">創建時間</th>
+        <th class="table-header">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="text-left py-3 px-4">1</td>
+        <td class="text-left py-3 px-4">商品名稱</td>
+        <td class="text-left py-3 px-4">$100</td>
+        <td class="text-left py-3 px-4">50</td>
+        <td class="text-left py-3 px-4">2024-07-02</td>
+        <td class="text-left py-3 px-4"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="fixed bottom-4 right-4">
+  <button class="bg-red-500 text-white rounded-full p-4 shadow-lg">
+    點我問問題
+  </button>
+</div>
+{% endblock%}

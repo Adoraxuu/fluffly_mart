@@ -1,6 +1,35 @@
 {% extends "page/base.html" %} {% block content %}
 <div class="container mx-auto p-4">
-  {% include "order/status.html"%} {% include "order/order_search.html"%}
+  {% include "order/status.html"%}
+
+  <div class="flex items-center space-x-4 mb-4">
+    <div class="flex-1">
+      <label for="return-person">採購人</label>
+      <select id="return-person" name="return-person">
+        <option>全部</option>
+      </select>
+    </div>
+    <div class="flex-1">
+      <label for="condition-query">條件查詢</label>
+      <select id="condition-query" name="condition-query">
+        <option>商品編號</option>
+      </select>
+    </div>
+    <div class="flex-1">
+      <label for="order-date">訂單時間</label>
+      <input type="date" id="order-date" name="order-date" class="date" />
+    </div>
+    <div class="flex-1">
+      <label for="return-person">資源</label>
+      <select id="return-resource" name="return-resource">
+        <option>全部</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="search-button p-2">
+    <button class="btn-primary">查詢</button>
+  </div>
 
   <div class="flex items-center space-x-4 mb-4">
     <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md">

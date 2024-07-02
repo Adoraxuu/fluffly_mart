@@ -1,0 +1,57 @@
+{% extends "page/base.html" %} {% block content %}
+<div class="flex-1 p-8">
+  <div class="mb-4 flex space-x-4">
+    <div class="flex-1">
+      <label for="product-name">選品集名稱</label>
+      <input name="product-name" placeholder="請輸入" />
+    </div>
+    <div class="flex-1">
+      <label for="start-date">創建時間</label>
+      <input type="date" name="start-date" class="date" />
+    </div>
+    <div class="flex-1">
+      <label for="end-date">結束時間</label>
+      <input type="date" name="end-date" class="date" />
+    </div>
+    <div class="flex-1">
+      <label for="status">狀態</label>
+      <select name="status">
+        <option value="">選擇狀態</option>
+        <option value="active">啟動</option>
+        <option value="inactive">未啟動</option>
+      </select>
+    </div>
+    <div class="flex items-end space-x-4">
+      <button class="btn-primary">查詢</button>
+      <button class="btn-gray">重置</button>
+    </div>
+  </div>
+  <div class="mb-4 flex items-center space-x-4">
+    <button class="btn-primary">新建選品集</button>
+    <button class="btn-gray">查看鋪貨任務</button>
+  </div>
+  <div>
+    <table class="min-w-full bg-white">
+      <thead class="bg-gray-300">
+        <tr>
+          <th class="table-header">商品名稱</th>
+          <th class="table-header">商品量</th>
+          <th class="table-header">任務詳細內容</th>
+          <th class="table-header">狀態</th>
+          <th class="table-header">操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="py-2 px-4">商品 A</td>
+          <td class="py-2 px-4">100</td>
+          <td class="py-2 px-4">詳細內容 A</td>
+          <td class="py-2 px-4">啟動</td>
+          <td class="py-2 px-4"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
