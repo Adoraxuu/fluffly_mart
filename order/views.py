@@ -5,3 +5,6 @@ def index(request):
 
 def refund(request):
     return render(request, 'order/refund.html')
+
+def shipping(request):
+    return render(request, 'order/shipping.html')

@@ -1,49 +1,24 @@
 {% load static %}
 <div class="flex items-center space-x-4 mb-4">
   <div class="flex-1">
-    <label for="return-person" class="block text-sm font-medium text-gray-700"
-      >採購人</label
-    >
-    <select
-      id="return-person"
-      name="return-person"
-      class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-    >
+    <label for="return-person">採購人</label>
+    <select id="return-person" name="return-person">
       <option>全部</option>
     </select>
   </div>
   <div class="flex-1">
-    <label for="condition-query" class="block text-sm font-medium text-gray-700"
-      >條件查詢</label
-    >
-    <select
-      id="condition-query"
-      name="condition-query"
-      class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-    >
+    <label for="condition-query">條件查詢</label>
+    <select id="condition-query" name="condition-query">
       <option>商品編號</option>
     </select>
   </div>
   <div class="flex-1">
-    <label for="order-date" class="block text-sm font-medium text-gray-700"
-      >訂單時間</label
-    >
-    <input
-      type="date"
-      id="order-date"
-      name="order-date"
-      class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-    />
+    <label for="order-date">訂單時間</label>
+    <input type="date" id="order-date" name="order-date" class="date" />
   </div>
   <div class="flex-1">
-    <label for="return-person" class="block text-sm font-medium text-gray-700"
-      >資源</label
-    >
-    <select
-      id="return-resource"
-      name="return-resource"
-      class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-    >
+    <label for="return-person">資源</label>
+    <select id="return-resource" name="return-resource">
       <option>全部</option>
     </select>
   </div>

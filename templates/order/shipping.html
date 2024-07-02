@@ -1,0 +1,163 @@
+{% extends "page/base.html" %} {% block content %} {% load static %}
+<div class="container mx-auto p-4">
+  <div class="grid grid-cols-6 gap-4 mb-2">
+    <div class="col-span-1">
+      <label for="order-id" \>訂購單ID</label>
+      <input id="order-id" name="order-id" />
+    </div>
+    <div class="col-span-1">
+      <label for="main-order-id" \>貨源主單號</label>
+      <input id="main-order-id" name="main-order-id" />
+    </div>
+    <div class="col-span-1">
+      <label for="sub-order-id" \>貨源子單號</label>
+      <input id="sub-order-id" name="sub-order-id" />
+    </div>
+    <div class="col-span-1">
+      <label for="logistics-type" \>物流異常類型</label>
+      <select id="logistics-type" name="logistics-type">
+        <option>全部</option>
+      </select>
+    </div>
+    <div class="col-span-1">
+      <label for="reminder-category" \>異常提醒分類</label>
+      <select id="reminder-category" name="reminder-category">
+        <option>全部</option>
+      </select>
+    </div>
+    <div class="col-span-1">
+      <label for="payment-date" \>付款時間</label>
+      <input type="date" id="payment-date" name="payment-date" class="date" />
+    </div>
+  </div>
+
+  <div class="search-button p-2">
+    <button class="btn-gray">重置</button>
+    <button class="btn-primary">確認</button>
+  </div>
+
+  <div class="overflow-x-auto">
+    <table class="min-w-full bg-white">
+      <thead class="bg-[#ff3D00] text-white">
+        <tr>
+          <th class="table-header">
+            <label class="flex items-center text-white">
+              付款時間
+              <img
+                src="{% static 'img/table/sort.svg' %}"
+                alt="logo"
+                class="w-[10px] h-[14px] mx-[5px]"
+              />
+            </label>
+          </th>
+
+          <th class="table-header">
+            <label class="flex items-center text-white">
+              訂購單ID
+              <img
+                src="{% static 'img/table/sort.svg' %}"
+                alt="logo"
+                class="w-[10px] h-[14px] mx-[1px]"
+              />
+            </label>
+          </th>
+          <th class="table-header">
+            <label class="flex items-center text-white">
+              貨源主單號
+              <img
+                src="{% static 'img/table/sort.svg' %}"
+                alt="logo"
+                class="w-[10px] h-[14px] mx-[1px]"
+              />
+            </label>
+          </th>
+          <th class="table-header">
+            <label class="flex items-center text-white">
+              貨源子單號
+              <img
+                src="{% static 'img/table/sort.svg' %}"
+                alt="logo"
+                class="w-[10px] h-[14px] mx-[1px]"
+              />
+            </label>
+          </th>
+          <th class="table-header">
+            <label class="flex items-center text-white">
+              國內段貨運單號
+              <img
+                src="{% static 'img/table/sort.svg' %}"
+                alt="logo"
+                class="w-[10px] h-[14px] mx-[1px]"
+              />
+            </label>
+          </th>
+          <th class="table-header">
+            <label class="flex items-center text-white">
+              國際段貨運單號
+              <img
+                src="{% static 'img/table/sort.svg' %}"
+                alt="logo"
+                class="w-[10px] h-[14px] mx-[1px]"
+              />
+            </label>
+          </th>
+          <th class="table-header">
+            <label class="flex items-center text-white">
+              國際段物流商單號
+              <img
+                src="{% static 'img/table/sort.svg' %}"
+                alt="logo"
+                class="w-[10px] h-[14px] mx-[1px]"
+              />
+            </label>
+          </th>
+          <th class="table-header">
+            <label class="flex items-center text-white">
+              物流異常類型
+              <img
+                src="{% static 'img/table/sort.svg' %}"
+                alt="logo"
+                class="w-[10px] h-[14px] mx-[1px]"
+              />
+            </label>
+          </th>
+          <th class="table-header">
+            <label class="flex items-center text-white">
+              異常提醒
+              <img
+                src="{% static 'img/table/sort.svg' %}"
+                alt="logo"
+                class="w-[10px] h-[14px] mx-[1px]"
+              />
+            </label>
+          </th>
+          <th class="table-header">
+            <label class="flex items-center text-white">
+              異常解釋
+              <img
+                src="{% static 'img/table/sort.svg' %}"
+                alt="logo"
+                class="w-[10px] h-[14px] mx-[1px]"
+              />
+            </label>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table-body">2024-07-02</td>
+          <td class="table-body">12345</td>
+          <td class="table-body">A123</td>
+          <td class="table-body">B123</td>
+          <td class="table-body">1234567890</td>
+          <td class="table-body">0987654321</td>
+          <td class="table-body">1234567890</td>
+          <td class="table-body">Delay</td>
+          <td class="table-body">Yes</td>
+          <td class="table-body">Customs hold</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock%}

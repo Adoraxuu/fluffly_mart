@@ -25,7 +25,7 @@
       <ul x-show="open" class="transition-all duration-300">
         <li><a href="{% url 'order:index' %}" class="sidebar-link">訂單管理</a></li>
         <li><a href="{% url 'order:refund' %}" class="sidebar-link">退貨退款</a></li>
-        <li><a href="#" class="sidebar-link">物流管理</a></li>
+        <li><a href="{% url 'order:shipping' %}" class="sidebar-link">物流管理</a></li>
       </ul>
     </section>
     <div class="sidebar-divider"></div>
