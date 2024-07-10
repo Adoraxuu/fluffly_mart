@@ -1,0 +1,106 @@
+{% extends "page/base.html" %} {% block content %}
+<div class="container mx-auto p-4 bg-white shadow-md">
+  <h2 class="text-xl font-bold mb-4">自訂選品規則</h2>
+  <div class="grid grid-cols-2 gap-4 mb-4">
+    <div class="col-span-1">
+      <label class="block mb-2">商品標題</label>
+      <input
+        id="product-category"
+      />
+    </div>
+    <div class="col-span-1">
+      <label class="block mb-2">Product Item</label>
+      <input
+        id="product-item"
+      >
+      </input>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <span>商品類目</span>
+    <div class="flex space-x-4 mb-4">
+        <input id="product-item"></input>
+    </div>
+    <div class="space-y-4">
+      <div>
+        <label class="block mb-2">行動標籤</label>
+        <button class="bg-[#FFF3E0] text-[#FF3D00] rounded-3xl px-3 py-2 m-2">
+            男裝/女裝
+        </button>
+        <button class="bg-gray-300 text-gray-600 rounded-3xl px-3 py-2 m-2">
+            家居
+        </button>
+      </div>
+      <div class="space-y-4 bg-gray-50 p-4 rounded">
+        <div class="flex justify-between items-center">
+            <span>服飾風格</span>
+            <button class="px-3 py-2 text-orange-500 border border-orange-500 rounded-3xl">+ 選擇</button>
+        </div>
+        <div class="flex justify-between items-center">
+            <span>服飾適用人群</span>
+            <button class="px-3 py-2 text-orange-500 border border-orange-500 rounded-3xl">+ 選擇</button>
+        </div>
+        <div class="flex justify-between items-center">
+            <span>服飾版型 (寬鬆度)</span>
+            <button class="px-3 py-2 text-orange-500 border border-orange-500 rounded-3xl">+ 選擇</button>
+        </div>
+    </div>
+      <div>
+        <h2 class="text-xl">自訂篩選規則</h2>
+        <label class="block mb-2">價格區間</label>
+        <input></input>
+        <label class="block mb-2">商品銷量</label>
+        <input></input>
+        <label class="block mb-2">店鋪DSR</label>
+        <input></input>
+      </div>
+      <div class="mb-4">
+        <h3 class="text-lg font-bold mb-2">自訂篩選規則</h3>
+        <div class="flex space-x-4">
+          <label class="flex items-center space-x-2">
+            <input
+              type="radio"
+              name="sorting-rule"
+              value="sales"
+              class="form-radio"
+            />
+            <span>銷量降序</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input
+              type="radio"
+              name="sorting-rule"
+              value="credits"
+              class="form-radio"
+            />
+            <span>銷量升序</span>
+          </label>
+        </div>
+      </div>
+      <button class="btn-primary">
+        預覽商品
+      </button>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container mx-auto p-4">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      {% for product in products %}
+      <div class="bg-white rounded-lg shadow-md p-4">
+          <img src="{{ product.image_url }}" alt="{{ product.title }}" class="w-full h-48 object-cover rounded-t-lg">
+          <div class="mt-4">
+              <h3 class="text-lg font-semibold">{{ product.title }}</h3>
+              <p class="text-gray-600">價格: ¥{{ product.price }}</p>
+              <p class="text-gray-600">銷量: {{ product.sales }}+</p>
+              <p class="text-gray-600">DSR: {{ product.dsr }}</p>
+          </div>
+      </div>
+      {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

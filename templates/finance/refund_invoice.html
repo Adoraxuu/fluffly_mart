@@ -1,0 +1,61 @@
+{% extends "page/base.html" %} {% block content %} <div class="container mx-auto p-4">
+    <div class="container mx-auto p-4 bg-white shadow-md">
+        <div class="grid grid-cols-8 gap-4 mb-2">
+            <div class="col-span-1">
+                <label for="order-id">訂購單主單</label>
+                <input id="order-id" name="order-id" class="w-full p-2 border border-gray-300 rounded" />
+            </div>
+            <div class="col-span-1">
+                <label for="main-order-id">貨源主單號</label>
+                <input id="main-order-id" name="main-order-id" class="w-full p-2 border border-gray-300 rounded" />
+            </div>
+            <div class="col-span-1">
+                <label for="order-date">訂單建立時間</label>
+                <input type="date" id="order-date" name="order-date" class="w-full p-2 border border-gray-300 rounded" />
+            </div>
+            <div class="col-span-1">
+                <label for="payment-date">訂單支付時間</label>
+                <input type="date" id="payment-date" name="payment-date" class="w-full p-2 border border-gray-300 rounded" />
+            </div>
+            <div class="col-span-2 m-5">
+                <button class="btn-gray">重置</button>
+                <button class="btn-primary">確認</button>
+            </div>
+        </div>
+    </div>
+    <table class="min-w-full border-collapse">
+      <thead class="bg-[#ff3D00] text-white">
+        <tr>
+          <th class="border p-2">渠道單號</th>
+          <th class="border p-2">渠道訂單建立時間</th>
+          <th class="border p-2">主單ID</th>
+          <th class="border p-2">子單ID</th>
+          <th class="border p-2">支付時間</th>
+          <th class="border p-2">貨源市場主單ID</th>
+          <th class="border p-2">貨源市場子單ID</th>
+          <th class="border p-2">退款幣種</th>
+          <th class="border p-2">訂單退款金額(CNY)</th>
+          <th class="border p-2">退款申請時間</th>
+          <th class="border p-2">退款完結時間</th>
+          <th class="border p-2">退款渠道交易</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>{% endblock %}

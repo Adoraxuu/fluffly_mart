@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+def pay(request):
+    return render(request, 'finance/pay.html')
+
+def refund_invoice(request):
+    return render(request, 'finance/refund_invoice.html')

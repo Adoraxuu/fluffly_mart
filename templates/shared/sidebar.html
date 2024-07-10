@@ -51,8 +51,7 @@
         </button>
       </div>
       <ul x-show="open" class="transition-all duration-300">
-        <li><a href="{% url 'product:index' %}" class="sidebar-link">批量選品</a></li>
-        <li><a href="{% url 'product:search' %}" class="sidebar-link">搜索選品</a></li>
+        <li><a href="{% url 'product:index' %}" class="sidebar-link">選品集</a></li>
         <li><a href="{% url 'product:inventory' %}" class="sidebar-link">鋪貨任務管理</a></li>
         <li><a href="{% url 'product:selected' %}" class="sidebar-link">已選商品管理</a></li>
       </ul>
@@ -80,8 +79,8 @@
         </button>
       </div>
       <ul x-show="open" class="transition-all duration-300">
-        <li><a href="#" class="sidebar-link">支付帳單</a></li>
-        <li><a href="#" class="sidebar-link">退款帳單</a></li>
+        <li><a href="{% url 'finance:pay' %}" class="sidebar-link">支付帳單</a></li>
+        <li><a href="{% url 'finance:refund_invoice' %}" class="sidebar-link">退款帳單</a></li>
       </ul>
     </section>
     </ul>

@@ -1,0 +1,87 @@
+{% extends "page/base.html" %} {% block content %} {% load static%}
+<div class="container mx-auto p-4">
+    <div class="container mx-auto p-4 bg-white shadow-md">
+        <div class="grid grid-cols-8 gap-4 mb-2">
+            <div class="col-span-1">
+                <label for="order-id">訂購單主單</label>
+                <input id="order-id" name="order-id" class="w-full p-2 border border-gray-300 rounded" />
+            </div>
+            <div class="col-span-1">
+                <label for="main-order-id">貨源主單號</label>
+                <input id="main-order-id" name="main-order-id" class="w-full p-2 border border-gray-300 rounded" />
+            </div>
+            <div class="col-span-1">
+                <label for="order-date">訂單建立時間</label>
+                <input type="date" id="order-date" name="order-date" class="w-full p-2 border border-gray-300 rounded" />
+            </div>
+            <div class="col-span-1">
+                <label for="payment-date">訂單支付時間</label>
+                <input type="date" id="payment-date" name="payment-date" class="w-full p-2 border border-gray-300 rounded" />
+            </div>
+            <div class="col-span-2 m-5">
+                <button class="btn-gray">重置</button>
+                <button class="btn-primary">確認</button>
+            </div>
+            <div class="col-span-1">
+                <label for="logistics-type" \>選擇指標(29)</label>
+                <select id="logistics-type" name="logistics-type">
+                  <option>全部</option>
+                </select>
+            </div>
+            <ul class="flex align-middle items-center">
+                <li class="bg-[#ff3D00] rounded-full p-2 m-2 w-8 h-8">
+                    <img
+                    src="{% static 'img/table/download.svg' %}"
+                    alt="logo"
+                    class="w-[13px] h-[16px] "
+                    />
+                </li>
+                <li class="bg-[#ff3D00] rounded-full p-2 m-2 w-8 h-8">
+                    <img
+                    src="{% static 'img/table/document.svg' %}"
+                    alt="logo"
+                    class="w-[13px] h-[16px] "
+                    />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <table class="min-w-full border-collapse">
+      <thead class="bg-[#ff3D00] text-white">
+        <tr>
+          <th class="border p-2">渠道單號</th>
+          <th class="border p-2">渠道訂單建立時間</th>
+          <th class="border p-2">主單ID</th>
+          <th class="border p-2">子單ID</th>
+          <th class="border p-2">支付時間</th>
+          <th class="border p-2">商品ID</th>
+          <th class="border p-2">前台備入商品名稱</th>
+          <th class="border p-2">實際商品名稱</th>
+          <th class="border p-2">商品數量</th>
+          <th class="border p-2">訂單原幣種</th>
+          <th class="border p-2">預估採購價</th>
+          <th class="border p-2">商品原總價</th>
+          <th class="border p-2">優惠金額</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+            <td class="table-body">-</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
